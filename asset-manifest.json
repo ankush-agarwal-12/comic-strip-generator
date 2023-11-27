@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/comic-strip-generator/static/css/main.f855e6bc.css",
+    "main.js": "/comic-strip-generator/static/js/main.0a007e27.js",
+    "static/js/787.4d1a25dd.chunk.js": "/comic-strip-generator/static/js/787.4d1a25dd.chunk.js",
+    "index.html": "/comic-strip-generator/index.html",
+    "main.f855e6bc.css.map": "/comic-strip-generator/static/css/main.f855e6bc.css.map",
+    "main.0a007e27.js.map": "/comic-strip-generator/static/js/main.0a007e27.js.map",
+    "787.4d1a25dd.chunk.js.map": "/comic-strip-generator/static/js/787.4d1a25dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.0a007e27.js"
+  ]
+}
