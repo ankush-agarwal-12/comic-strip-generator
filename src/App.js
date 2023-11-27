@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import ComicPanel from './ComicPanel';
 
 function App() {
+  const [inputs, setInputs] = useState(Array(10).fill(''));
+  const [images, setImages] = useState(Array(10).fill(null));
+
+  const handleInputChange = (index, value) => {
+    const newInputs = [...inputs];
+    newInputs[index] = value;
+    setInputs(newInputs);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Comic Strip Generator</h1>
+      <div className="comic-form">
+        {inputs.map((input, index) => (
+          <div key={index} className="panel-input">
+            <textarea
+              placeholder={`Panel ${index + 1}`}
+              value={input}
+              onChange={(e) => handleInputChange(index, e.target.value)}
+            />
+            <ComicPanel text={input} index={index} images={images} setImages={setImages} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
